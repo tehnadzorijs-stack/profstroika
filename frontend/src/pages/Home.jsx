@@ -1,7 +1,8 @@
+import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { createClient } from '@supabase/supabase-js';
 
-// Подключение к Supabase (замените на свои ключи)
+// Подключение к Supabase (использует переменные из .env)
 const supabase = createClient(
   import.meta.env.VITE_SUPABASE_URL,
   import.meta.env.VITE_SUPABASE_KEY
@@ -59,6 +60,3 @@ export default function Home() {
     </div>
   );
 }
-
-// Добавьте import Link в начале файла
-import { Link } from 'react-router-dom';
